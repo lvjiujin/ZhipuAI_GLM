@@ -191,9 +191,9 @@ def generate_character_profile(text: str)-> Generator[str, None, None]:
     """ 用chatglm生成人物的人设 """
 
     instruction = f"""
-请根据下列文本生成人物的角色和人设。角色主要是从事的主要职业，比如歌手，作家，政治家等。
+请根据下列文本生成人物的角色和人设。角色主要是: 姓名和从事的主要职业，比如歌手，作家，政治家等。
 人设主要包括：人物性别，大致年龄，国籍，性格，爱好，主要经历，教育背景，擅长领域，成就等。要求：
-1. 以字典格式返回角色和人设，key分别为role和character_profile
+1. 以字典格式返回角色和人设，key分别为role和character_profile。role也是一个字典，key是name和occupation。
 2. 尽量不带个人偏见。
 3. 尽量用短语描写，而不是完整的句子。
 4. 不要超过200字
